@@ -3,10 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <%- include('./partials/nav') %>
+  <title><%= restaurant.name %></title>
 </head>
 <body>
-  <h1>Home Page</h1>
+  <h1><%= restaurant.name %></h1>
+  <h2><%= restaurant.address %></h2>
+  <h2><%= restaurant.phone %></h2>
+  <% if (restaurant.isOpen) { %>
+    <h3>We Are Open!</h3>
+  <% } else { %>
+    <h3>Sorry, We Are Closed</h3>
+  <% } %>
 </body>
 </html>
 
+
+
+
+
+
+
+
+  
+  

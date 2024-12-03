@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <%- include('./partials/nav') %>
-        <title>Menu</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%- include('./partials/nav') %>
+  <title><%= category %></title>
 </head>
 <body>
-    <h1>Full Menu</h1>
-    <ul>
-      <% menu.forEach(function(item) { %>
+  <h1><%= category %></h1>
+  <ul>
+    <% menuItems.forEach(function(item) { %>
         <li>
             <b><%= item.name %></b>
             <br>$<%= item.price %>
@@ -18,6 +18,6 @@
         </li>
         <br>
         <% }) %>
-    </ul>
+</ul>
 </body>
 </html>
